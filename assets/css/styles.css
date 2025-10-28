@@ -21,7 +21,7 @@
   --z-fixed: 100;
 }
 
-@media screen and(min-width:768px) {
+@media screen and (min-width: 768px) {
   :root {
     --big-font-size: 3.5rem;
     --h2-font-size: 2rem;
@@ -38,10 +38,10 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
 }
 
 body {
-  font-size: var(--h2-font-size);
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -49,7 +49,7 @@ body {
 }
 
 h1,
-h1,
+h2,
 p {
   margin: 0;
 }

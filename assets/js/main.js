@@ -1,24 +1,36 @@
 const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId)
+    const toggle = document.getElementById(toggleId);
+    const nav = document.getElementById(navId);
     if (toggle && nav) {
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('show')
-        })
-    }
-}
-showMenu('nav-toggle', 'nav-menu')
+        const toggleMenu = () => {
+            nav.classList.toggle('show');
+            const expanded = nav.classList.contains('show');
+            toggle.setAttribute('aria-expanded', expanded);
+        };
 
-const navLink = document.querySelectorAll('.nav__link')
+        toggle.addEventListener('click', toggleMenu);
+        toggle.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+    }
+};
+showMenu('nav-toggle', 'nav-menu');
+
+const navLink = document.querySelectorAll('.nav__link');
 
 function linkAction() {
-    navLink.forEach(n => n.classList.remove(''))
-    this.classList.add('active')
+    navLink.forEach(n => n.classList.remove('active'));
+    this.classList.add('active');
 
-    const navMenu = document.getElementById('nav-menu')
-    navMenu.classList.remove('show')
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.remove('show');
+    const toggle = document.getElementById('nav-toggle');
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
 }
-navLink.forEach(n => n.addEventListener('click', linkAction))
+navLink.forEach(n => n.addEventListener('click', linkAction));
 
 const sr = ScrollReveal({
     origin: 'top',
@@ -44,3 +56,24 @@ sr.reveal('.skills__img', { delay: 400 })
 
 sr.reveal('.work__img', { interval: 200 })
 sr.reveal('.contact__input', { interval: 200 })
+
+// Año dinámico en el footer
+const yearEl = document.getElementById('year');
+if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+}
+
+// Envío del formulario por mailto
+const form = document.getElementById('contact-form');
+if (form) {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = (form.elements['name']?.value || '').trim();
+        const email = (form.elements['email']?.value || '').trim();
+        const message = (form.elements['message']?.value || '').trim();
+        const subject = encodeURIComponent('Contacto - Portafolio Marc');
+        const body = encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`);
+        window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        form.reset();
+    });
+}

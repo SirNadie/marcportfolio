@@ -4,29 +4,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio de Marc: Programador Python y Diseñador Web Multimedia. Proyectos, habilidades y contacto." />
+  <meta name="theme-color" content="#111111" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Portafolio de Marc" />
+  <meta property="og:description" content="Programador Python y Diseñador Web Multimedia. Conoce mis proyectos y contáctame." />
+  <meta property="og:image" content="assets/img/perfil.png" />
+  <meta property="og:locale" content="es_ES" />
+  <link rel="preconnect" href="https://unpkg.com" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="shortcut icon" href="assets/img/favicon.ico" />
-  <title>Marc's Portfolio</title>
-
+  <title>Portafolio de Marc</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Marc",
+    "url": "",
+    "jobTitle": "Programador Python y Diseñador Web Multimedia",
+    "sameAs": [
+      "https://www.linkedin.com/in/marcrodriguezatagua/",
+      "https://github.com/SirNadie"
+    ]
+  }
+  </script>
 </head>
 
 <body>
   <header class="l-header">
     <nav class="nav bd-grid">
       <div>
-        <a href="#" class="nav__logo">Marc</a>
+        <a href="#home" class="nav__logo">Marc</a>
       </div>
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-          <li class="nav__item"><a href="#work" class="nav__link">Jobs</a></li>
-          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+          <li class="nav__item"><a href="#home" class="nav__link">Inicio</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">Sobre mí</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Habilidades</a></li>
+          <li class="nav__item"><a href="#work" class="nav__link">Trabajos</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>
         </ul>
       </div>
-      <div class="nav__toggle" id="nav-toggle">
+      <div class="nav__toggle" id="nav-toggle" role="button" tabindex="0" aria-label="Abrir menú" aria-controls="nav-menu" aria-expanded="false">
         <i class="bx bx-menu"></i>
       </div>
     </nav>
@@ -34,88 +54,48 @@
   <main class="l-main">
     <section class="home bd-grid" id="home">
       <div class="home__data">
-        <h1 class="home__title">Hi, <br>I'm <span class="home__title-color">Marc.</span><br> Multimedia<br> Web
-          Designer</h1>
-          <h3>(Python developer<br>under construction)</h3>
-        <a href="#contact" class="button1">Contact</a>
+        <h1 class="home__title">Hola, <br>soy <span class="home__title-color">Marc.</span><br> Diseñador<br> Web Multimedia</h1>
+          <h3>Desarrollador Python (en formación)</h3>
+        <a href="#contact" class="button1">Contáctame</a>
       </div>
       <div class="home__social">
-        <a href="https://www.linkedin.com/in/marcrodriguezatagua/" target="_blank" class="home__social-icon"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/marcrodriguezatagua/" target="_blank" rel="noopener noreferrer" class="home__social-icon" aria-label="LinkedIn de Marc"><i class="bx bxl-linkedin"></i></a>
         <!-- <a href="#" class="home__social-icon"><i class="bx bxl-behance"></i></a> -->
-        <a href="https://github.com/SirNadie?tab=repositories" target="_blank" class="home__social-icon"><i class="bx bxl-github"></i></a>
+        <a href="https://github.com/SirNadie?tab=repositories" target="_blank" rel="noopener noreferrer" class="home__social-icon" aria-label="GitHub de Marc"><i class="bx bxl-github"></i></a>
       </div>
       <div class="home__img">
-        <img src="assets/img/perfil.png" alt="">
+        <img src="assets/img/perfil.png" alt="Foto de perfil de Marc">
       </div>
     </section>
     <section class="about section" id="about">
-      <h2 class="section-title">About me</h2>
+      <h2 class="section-title">Sobre mí</h2>
       <div class="about__container bd-grid">
         <div class="about__img">
-          <img src="assets/img/about.png" alt="">
+          <img src="assets/img/about.png" alt="Marc trabajando frente al ordenador" loading="lazy">
         </div>
         <div>
           <!-- <h2 class="about__subtitle">Soy Marc</h2> -->
-          <p class="about__text">Python Programmer / Multimedia Web Designer
+          <p class="about__text">Programador Python / Diseñador Web Multimedia
 
-A versatile professional with a strong foundation in multimedia design and over five years of experience, I've transitioned into Python programming and have rapidly developed a solid skillset. While I haven't held a formal corporate position, my dedication to self-improvement is evident in the successful completion of numerous personal projects.</p>
+Profesional versátil con una sólida base en diseño multimedia y más de cinco años de experiencia. He dado el salto a la programación con Python y he desarrollado rápidamente un conjunto de habilidades sólido. Aunque no he ocupado un puesto corporativo formal, mi dedicación a la mejora continua se refleja en la realización exitosa de numerosos proyectos personales.</p>
         </div>
       </div>
     </section>
     <section class="skills section" id="skills">
-      <h2 class="section-title">Skills</h2>
+      <h2 class="section-title">Habilidades</h2>
       <div class="skills__container bd-grid">
         <div>
           <!-- <h2 class="skills__subtitle">Habilidades Profesionales</h2> -->
-          <p class="skills__text"><b>Technical Skills:</b> Proficient in programming languages, web design software, and multimedia editing software.<br>
-            <b>Creative Skills:</b> Ability to generate original and innovative ideas, with a keen eye for design and the capacity to create visually appealing content.<br>
-            <b>Communication Skills:</b> Excellent written and verbal communication skills, with the ability to effectively communicate with clients, colleagues, and stakeholders.<br>
-            <b>Problem-Solving Skills:</b> Ability to identify and solve problems, with a strong set of analytical and critical thinking skills.<br>
-            <b>Teamwork: </b> Ability to collaborate effectively with others, with a willingness to share ideas and work towards common goals.
+          <p class="skills__text"><b>Habilidades técnicas:</b> Dominio de lenguajes de programación, software de diseño web y herramientas de edición multimedia.<br>
+            <b>Habilidades creativas:</b> Capacidad para generar ideas originales e innovadoras, con ojo crítico por el diseño y la estética.<br>
+            <b>Comunicación:</b> Excelente comunicación escrita y oral; facilidad para colaborar con clientes, colegas y stakeholders.<br>
+            <b>Resolución de problemas:</b> Capacidad para identificar y resolver problemas con pensamiento analítico y crítico.<br>
+            <b>Trabajo en equipo:</b> Colaboración efectiva, apertura a compartir ideas y trabajar por objetivos comunes.
           </p>
-          <!-- <div class="skills__data">
-            <div class="skills__names">
-              <i class="bx bxl-html5 skills__icon"></i>
-              <span class="skills__name">HTML5</span>
-            </div>
-            <div>
-              <span class="skills__percentage">95%</span>
-            </div>
-            <div class="skills__bar skills__html"></div>
-          </div>
-          <div class="skills__data">
-            <div class="skills__names">
-              <i class="bx bxl-css3 skills__icon"></i>
-              <span class="skills__name">CSS3</span>
-            </div>
-            <div>
-              <span class="skills__percentage">55%</span>
-            </div>
-            <div class="skills__bar skills__css"></div>
-          </div>
-          <div class="skills__data">
-            <div class="skills__names">
-              <i class="bx bxl-javascript skills__icon"></i>
-              <span class="skills__name">JavaScript</span>
-            </div>
-            <div>
-              <span class="skills__percentage">40%</span>
-            </div>
-            <div class="skills__bar skills__js"></div>
-          </div>
-          <div class="skills__data">
-            <div class="skills__names">
-              <i class="bx bxs-paint skills__icon"></i>
-              <span class="skills__name">UX/UI</span>
-            </div>
-            <div>
-              <span class="skills__percentage">85%</span>
-            </div>
-            <div class="skills__bar skills__ux"></div>
-          </div> -->
+          <!-- ... barras de habilidades opcionales ... -->
         </div>
         <div>
-          <img src="assets/img/work3.jpg" alt="" class="skills__img">
+          <img src="assets/img/work3.jpg" alt="Mockup de proyecto en pantalla" class="skills__img" loading="lazy">
         </div>
       </div>
     </section>
@@ -123,33 +103,33 @@ A versatile professional with a strong foundation in multimedia design and over 
       <h2 class="section-title">Trabajos</h2>
       <div class="work__container bd-grid">
         <div class="work__img">
-          <img src="assets/img/work1.jpg" alt="">
+          <img src="assets/img/work1.jpg" alt="Proyecto 1" loading="lazy">
         </div>
         <div class="work__img">
-          <img src="assets/img/work2.jpg" alt="">
+          <img src="assets/img/work2.jpg" alt="Proyecto 2" loading="lazy">
         </div>
         <div class="work__img">
-          <img src="assets/img/work3.jpg" alt="">
+          <img src="assets/img/work3.jpg" alt="Proyecto 3" loading="lazy">
         </div>
         <div class="work__img">
-          <img src="assets/img/work4.jpg" alt="">
+          <img src="assets/img/work4.jpg" alt="Proyecto 4" loading="lazy">
         </div>
         <div class="work__img">
-          <img src="assets/img/work5.jpg" alt="">
+          <img src="assets/img/work5.jpg" alt="Proyecto 5" loading="lazy">
         </div>
         <div class="work__img">
-          <img src="assets/img/work6.jpg" alt="">
+          <img src="assets/img/work6.jpg" alt="Proyecto 6" loading="lazy">
         </div>
       </div>
     </section>
     <section class="contact section" id="contact">
       <h2 class="section-title">Contacto</h2>
       <div class="contact__container bd-grid">
-        <form action="" class="contact__form">
-          <input type="text" placeholder="Nombre" class="contact__input">
-          <input type="email" placeholder="Correo Electrónico" class="contact__input">
-          <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-          <input type="button" value="Enviar" class="contact__button button">
+        <form id="contact-form" class="contact__form">
+          <input type="text" name="name" placeholder="Nombre" class="contact__input" autocomplete="name" required>
+          <input type="email" name="email" placeholder="Correo Electrónico" class="contact__input" autocomplete="email" required>
+          <textarea name="message" id="message" cols="0" rows="10" class="contact__input" placeholder="Mensaje" required></textarea>
+          <input type="submit" value="Enviar" class="contact__button button">
         </form>
       </div>
     </section>
@@ -158,13 +138,13 @@ A versatile professional with a strong foundation in multimedia design and over 
     <p class="footer__title">Marc</p>
     <div class="footer__social">
       <!-- <a href="#" class="footer__icon"><i class="bx bxl-facebook"></i></a> -->
-      <a href="#" class="footer__icon"><i class="bx bxl-instagram"></i></a>
+      <a href="#" class="footer__icon" aria-label="Instagram de Marc"><i class="bx bxl-instagram"></i></a>
       <!-- <a href="#" class="footer__icon"><i class="bx bxl-twitter"></i></a> -->
     </div>
-    <p>&#169; 2023 Todos los derechos reservados</p>
+    <p>&#169; <span id="year"></span> Todos los derechos reservados</p>
   </footer>
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/scrollreveal" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>
