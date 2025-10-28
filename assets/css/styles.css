@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@600;700;800&display=swap');
 
 :root {
   --header-height: 3rem;
   --font-semi: 600;
   --first-color: #ffa43a;
   --second-color: #111111;
-  --body-font: "Poppins", sans-serif;
+  --body-font: 'Inter', sans-serif;
+  --heading-font: 'Manrope', sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
@@ -52,6 +53,10 @@ h1,
 h2,
 p {
   margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: var(--heading-font);
 }
 
 ul {
@@ -132,6 +137,8 @@ img {
     background-color: var(--second-color);
     transition: .5s;
   }
+  .nav__link { color: #fff; }
+  /* idioma automático, sin selector */
 }
 
 .nav__item {
@@ -140,22 +147,14 @@ img {
 
 .nav__link {
   position: relative;
-  color: #fff;
+  color: var(--second-color);
 }
 
 .nav__link:hover {
   position: relative;
 }
 
-.nav__link:hover::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 0.18rem;
-  left: 0;
-  top: 2rem;
-  background-color: var(--first-color);
-}
+.nav__link:hover::after { content: none; }
 
 .nav__logo {
   color: var(--second-color);
@@ -167,19 +166,14 @@ img {
   cursor: pointer;
 }
 
-.active::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 0.18rem;
-  left: 0;
-  top: 2rem;
-  background-color: var(--first-color);
-}
+.active::after { content: none; }
 
 .show {
   right: 0;
 }
+
+/* Language switcher */
+/* selector de idioma eliminado */
 
 .home {
   position: relative;
@@ -224,7 +218,7 @@ img {
 }
 
 .button1 {
-  display: block inline-block;
+  display: inline-block;
   background-color: var(--first-color);
   color: #fff;
   padding: 8px 5%;
@@ -335,6 +329,7 @@ img {
   box-shadow: 0 4px 25px rgba(14, 36, 49, .15);
   border-radius: .5rem;
   overflow: hidden;
+  position: relative;
 }
 
 .work__img img {
@@ -343,6 +338,17 @@ img {
 
 .work__img img:hover {
   transform: scale(1.1);
+}
+
+.work__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: .5rem .75rem;
+  background: rgba(17, 17, 17, 0.75);
+  color: #fff;
+  font-size: .9rem;
 }
 
 .contact__input {
@@ -363,6 +369,10 @@ img {
   font-size: var(--normal-font-size);
   cursor: pointer;
   margin-left: auto;
+}
+
+.form-status {
+  margin-top: 0.5rem;
 }
 
 .footer {
